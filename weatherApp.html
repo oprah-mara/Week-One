@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+    <style>
+        *{
+            margin: 0;
+            font-family: monospace;
+        }
+        .header-class{
+            text-align: center;
+        }
+        h1{
+            color:  rgb(26,100,214);
+            font-size: 2.5rem;
+        }
+        h2{
+            font-size: 2.5rem;
+            font-weight: 100;   
+        }
+       
+        ul{
+            list-style: none;
+            text-align: center;
+            padding: 1px 0;
+            max-width: 400px;
+            margin: 50px auto;
+            cursor: pointer;
+            line-height: 3.5rem;
+        }
+        ul:hover{
+           background-color: rgb(255,251,240);
+
+        }
+        li{
+            font-size: 18px;
+        }
+        li:nth-child(2){
+            color: rgb(76,76,76);
+        }
+        .bold-text, .text-highlight{
+            font-weight: bold;
+        }
+        p{
+            /* padding: 20px; */
+            font-size: 18px;
+            color: rgb(76,76,76);
+        }
+        .footer{
+            text-align: center;
+            line-height: 3rem;
+        }
+        button{
+            padding: 18px;
+            background-color: rgb(26,100,214);
+            color: #fff;
+            border: 2px solid rgb(26,100,214);
+            font-size: 16px;
+            border-radius: 20px;
+            box-shadow: 2px 1px 10px rgb(26,100,214);
+            cursor: pointer;
+        }
+        button:hover{
+            color: rgb(26,100,214);
+            background-color: #fff;
+            transition: all 200ms ease-in-out;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header-class">
+        <h1>
+            🌤 <br>
+            Currently 21° in Tokyo
+        </h1>
+        <h2> 13° <span class="bold-text"> / 23° </span> </h2>
+    </div>
+
+    <div class="main-container">
+        <ul class="list-class">
+            <li> <strong> 🌧Tomorrow </strong> </li>
+            <li> 10°  <span class="text-highlight"> / 22° </span> </li>
+        </ul>
+
+        <ul class="list-class">
+            <li> <strong>🌥 Saturday</strong> </li>
+            <li> 15° <span class="text-highlight"> / 17° </span> </li>
+        </ul>
+
+        <ul class="list-class">
+            <li> <strong>☀️ Sunday</strong> </li>
+            <li> 25° <span class="text-highlight"> / 28° </span> </li>
+        </ul>
+    </div>
+
+    <div class="footer">
+        <button> Change City </button>
+        <p>Coded by Amarachi Opara</p>
+    </div>
+       
+
+    
+</body>
+</html>
