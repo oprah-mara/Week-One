@@ -42,6 +42,10 @@ a{
 a:hover{
     text-decoration: underline;
 }
+/* Applied when the user has already visited the link */
+a:visited {
+  color: red;
+}
 p{
     text-align: center;
 }
@@ -51,7 +55,7 @@ margin: 0 auto;
 }
 button{
 display: block;
-/* margin: 30px auto; */
+margin: 30px auto;
 padding: 10px 20px;
 font-size: 14px;
 color:#885df1;

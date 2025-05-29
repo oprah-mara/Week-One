@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+        }
+        body{
+            font-family: "Poppins", sans-serif;
+        }
+        .main-container{
+            text-align: center;
+            
+        }
+        h1{
+            font-weight: 600;
+            font-size: 2.2rem;
+        
+        }
+        h1 #cloud-emoji{
+            color: rgb(26,100,214);
+        }
+        h1 #light-text{
+            font-weight: 400;
+        }
+        ul{
+            list-style-type: none;
+            margin: 2rem auto;
+            padding-block: 1rem;
+            width: 50%;
+            cursor: pointer;
+        }
+        ul:hover{
+            background-color: rgb(255,251,239);
+        }
+        li{
+           margin-right: 3rem;
+           line-height: 2rem;
+           font-size: 1.1rem;
+        }
+        li:first-child{
+            font-weight: 600;
+           
+            
+        }
+        li:last-child{
+            color: rgb(76,76,76);
+            font-family: monospace;
+        }
+        .bold-text{
+            font-weight: bold;
+        }
+        button{
+            padding: 1rem;
+            background-color:  rgb(26,100,214);
+            color: white;
+            border: 1px solid rgb(26,100,214);
+            font-size: 1rem;
+            cursor: pointer;
+            border-radius: 2rem;
+        }
+        button:hover{
+            background-color: white;
+            color:  rgb(26,100,214);
+            
+        }
+        .footer-class{
+            line-height: 3rem;
+        }
+        p{
+          color: rgb(76,76,76);  
+          font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="main-container">
+        <div class="city-weather">
+            <h1>
+                <span id="cloud-emoji">🌤 <br>
+                Currently 21° in Tokyo 
+                </span>  <br>
+                <span id="light-text">13° / </span>23°
+            </h1>
+        </div>
+        <div class="ul-container">
+            <ul>
+                <li>🌧Tomorrow</li>
+                <li>10° <span class="bold-text">/ 22°</span> </li>
+            </ul>
+
+            <ul>
+                <li>🌥 Saturday</li>
+                <li>15° <span class="bold-text">/ 17°</span> </li>
+            </ul>
+
+            <ul>
+                <li>☀️ Sunday</li>
+                <li>25° <span class="bold-text"> / 28°</span> </li>
+            </ul>
+        </div>
+        <div class="footer-class">
+            <button id="myBtn">Change city</button>
+            <p>&copy; Coded by Amarachi</p>
+        </div>
+    </div>
+
+    
+<script>
+    // let hometown = prompt("what is your hometown?");
+    // alert(hometown);
+
+    // let firstName = prompt("what is your first name?");
+    // let lastName = prompt("what is your last name?");
+
+    // let fullname = firstName + " " + lastName;  This or 
+    // console.log (alert (firstName + " " +  lastName)); This
+
+
+    // let Age = prompt("How old are you?");
+    // if ( Age < 18){
+    //     alert("You cannot Apply");
+    // }
+    // if (Age >= 18){
+    //     alert("You can Apply");
+    // }
+    
+
+    // let currentHour = prompt("What is the time?");
+    // if (currentHour < 12){
+    //     alert("Good morning");
+    // }
+    // else if (currentHour > 18){
+    //     alert("Good evening");
+    // }
+    // else{
+    //     alert("Good afternoon");
+    // }
+
+    // function askForCountry(){
+    //     let countryName = prompt("What country are you from?");
+
+    //     countryName = countryName.toLowerCase().trim();
+
+    //     //let countryName = prompt("What country are you from?").toLowerCase().trim();
+    //     if(countryName === "brazil" || countryName === "portugal"){
+    //         alert("You speak Portuguese");
+    //     }
+    //     else {
+    //         alert("You dont speak Portuguese");
+    // }
+    // }
+    // askForCountry();
+
+    // function myFunction(){
+    //     let userName = prompt("What is your first name?");
+    //     let userAge = prompt("How old are you?");
+    //     let heading = document.querySelector("h1");
+
+    //     if(userAge >= 18){
+    //       heading.innerHTML = "Hi, " + userName + " you're " + userAge + " Welcome to New York !";          
+    //     }else {
+    //         heading.innerHTML = "Sorry, " + userName + " you're " + userAge +  " You cannot change city ";
+    //     }
+    // }
+    // let myBtn = document.querySelector("button");
+    // myBtn.addEventListener("click" , myFunction);
+
+    function userInteraction(){
+        let cityName = prompt("What city do you live in?");
+        let cityWeather = prompt("What temperature is it?");
+
+        let heading = document.getElementById("cloud-emoji");
+
+        if(cityWeather <= 30){
+            heading.innerHTML = `🥶 Currently ${cityWeather}°C in ${cityName}`;
+        }else if(cityWeather >= 31 && cityWeather < 60){
+            heading.innerHTML = `😊 <br /> Currently ${cityWeather}°C in ${cityName}`;
+        }else{
+            heading.innerHTML = `🌞 <br /> Currently ${cityWeather}°C in ${cityName}`;
+        }
+    }
+    let myBtn = document.querySelector("button");
+    myBtn.addEventListener("click" , userInteraction);
+</script>
+</body>
+</html>
