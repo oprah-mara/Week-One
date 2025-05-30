@@ -179,6 +179,13 @@
 
         let heading = document.getElementById("cloud-emoji");
 
+        if (!cityName || !cityWeather) {
+        heading.innerHTML = "⚠️ Please provide both your city and the temperature.";
+            return;
+        }
+
+        cityWeather = parseFloat(cityWeather); // convert string to number
+
         if(cityWeather <= 30){
             heading.innerHTML = `🥶 Currently ${cityWeather}°C in ${cityName}`;
         }else if(cityWeather >= 31 && cityWeather < 60){

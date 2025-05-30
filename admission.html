@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript</title>
+    <style>
+       .container{
+        margin:  auto;
+        /* border: 1px solid red; */
+        text-align: center;
+        
+        
+
+       }
+       button{
+        font-size: 1rem;
+        padding: 1rem;
+        background-color: blueviolet;
+        color: white;
+        border: 2px solid blueviolet;
+        border-radius: 20px 5px 20px;
+        box-shadow: 20px black;
+        cursor: pointer;
+        transition: all 250ms ease-in-out;
+        margin: 2rem;
+       } 
+       button:hover{
+        background-color: white;
+        color: blueviolet;
+       }
+       input{
+        display: block;
+        padding: 1rem;
+        margin: 1rem auto;     
+        
+       }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>SheCodes Admission Check</h1>
+
+        <input type="text" id="nameInput" placeholder="Your name" />
+        <input type="number" id="ageInput" placeholder="Your age" />
+        <input type="text" id="countryInput" placeholder="Your country" />
+
+        <button id="checkBtn">Check Eligibility</button>
+
+        <h2 id="result"></h2>
+    </div>
+    
+<script src="admission.js"></script>
+</body>
+</html>
